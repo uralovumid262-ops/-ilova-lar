@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Savdosi | Laptop Sales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button onclick="changeLanguage('uz')" class="lang-btn">O'Z</button>
+        <button onclick="changeLanguage('ru')" class="lang-btn">РУ</button>
+        <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button onclick="toggleTheme()" class="theme-btn">
+            <span id="theme-icon">🌙</span>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">💻</span>
+                <h1 id="site-title">Laptop Savdosi</h1>
+            </div>
+            <nav class="nav">
+                <a href="#home" id="nav-home">Bosh sahifa</a>
+                <a href="#products" id="nav-products">Mahsulotlar</a>
+                <a href="#about" id="nav-about">Biz haqimizda</a>
+                <a href="#contact" id="nav-contact">Aloqa</a>
+            </nav>
+            <div class="cart-icon">
+                <span>🛒</span>
+                <span id="cart-count" class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 id="hero-title">Eng yaxshi laptoplarni toping</h2>
+                <p id="hero-subtitle">Sifatli va arzon narxlarda</p>
+                <button class="cta-button" id="cta-button">Mahsulotlar katalogi</button>
+            </div>
+            <div class="hero-image">
+                <img id="hero-laptop-image" src="images/laptop-hero.png" alt="Modern laptop" class="laptop-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 id="products-title">Mahsulotlarimiz</h2>
+            <p id="products-subtitle">Eng so'ngi modeldagi laptoplar</p>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/laptop-1.png" alt="Gaming Laptop" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 id="product-1-title">O'yin uchun laptop</h3>
+                        <p id="product-1-desc">Yuqori unumdorlikka ega</p>
+                        <div class="product-price">
+                            <span id="product-1-price">$1,299</span>
+                            <span class="old-price">$1,499</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart(1)">
+                            <span id="add-to-cart-1">Savatchaga qo'shish</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/laptop-2.png" alt="Business Laptop" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 id="product-2-title">Biznes uchun laptop</h3>
+                        <p id="product-2-desc">Yengil va portativ</p>
+                        <div class="product-price">
+                            <span id="product-2-price">$899</span>
+                            <span class="old-price">$999</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart(2)">
+                            <span id="add-to-cart-2">Savatchaga qo'shish</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/laptop-3.png" alt="Student Laptop" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 id="product-3-title">Talabalar uchun laptop</h3>
+                        <p id="product-3-desc">Uzoq vaqt ishlaydi</p>
+                        <div class="product-price">
+                            <span id="product-3-price">$699</span>
+                            <span class="old-price">$799</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart(3)">
+                            <span id="add-to-cart-3">Savatchaga qo'shish</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/laptop-4.png" alt="Premium Laptop" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 id="product-4-title">Premium laptop</h3>
+                        <p id="product-4-desc">Eng yuqori sifat</p>
+                        <div class="product-price">
+                            <span id="product-4-price">$1,999</span>
+                            <span class="old-price">$2,299</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart(4)">
+                            <span id="add-to-cart-4">Savatchaga qo'shish</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 id="about-title">Biz haqimizda</h2>
+                <p id="about-text-1">
+                    Biz eng yaxshi laptoplarni taqdim etamiz. Sifat va ishonchlilik - bizning asosiy tamoyilimiz.
+                </p>
+                <p id="about-text-2">
+                    10 yildan beri bozorda muvaffaqiyatli ishlaymiz va minglab mijozlarimizga xizmat ko'rsatamiz.
+                </p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span id="stat-1" class="stat-text">Yillik tajriba</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5000+</span>
+                        <span id="stat-2" class="stat-text">Qoniqgan mijozlar</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100+</span>
+                        <span id="stat-3" class="stat-text">Mahsulot turi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="images/about-laptop.png" alt="About us laptop" class="about-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 id="contact-title">Aloqa</h2>
+            <p id="contact-subtitle">Savollaringiz bo'lsa, biz bilan bog'laning</p>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <label id="contact-name-label" for="name">Ismingiz</label>
+                    <input type="text" id="name" name="name" placeholder="Ismingizni kiriting" required>
+                </div>
+                <div class="form-group">
+                    <label id="contact-email-label" for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email manzilingiz" required>
+                </div>
+                <div class="form-group">
+                    <label id="contact-phone-label" for="phone">Telefon</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Telefon raqamingiz" required>
+                </div>
+                <div class="form-group">
+                    <label id="contact-message-label" for="message">Xabar</label>
+                    <textarea id="message" name="message" placeholder="Xabaringizni kiriting" required></textarea>
+                </div>
+                <button type="submit" class="submit-button" id="submit-button">Yuborish</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">💻</span>
+                    <h3 id="footer-title">Laptop Savdosi</h3>
+                </div>
+                <div class="footer-links">
+                    <a href="#home" id="footer-home">Bosh sahifa</a>
+                    <a href="#products" id="footer-products">Mahsulotlar</a>
+                    <a href="#about" id="footer-about">Biz haqimizda</a>
+                    <a href="#contact" id="footer-contact">Aloqa</a>
+                </div>
+                <div class="social-media">
+                    <a href="#" class="social-link">📘</a>
+                    <a href="#" class="social-link">📷</a>
+                    <a href="#" class="social-link">📺</a>
+                    <a href="#" class="social-link">🐦</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p id="footer-copyright">© 2024 Laptop Savdosi. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2 id="cart-title">Savatcha</h2>
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will be added here -->
+            </div>
+            <div class="cart-total">
+                <p id="cart-total-text">Jami:</p>
+                <p id="cart-total-amount">$0</p>
+            </div>
+            <button class="checkout-button" id="checkout-button">Rasmiylashtirish</button>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
